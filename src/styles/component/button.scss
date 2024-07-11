@@ -1,0 +1,36 @@
+@import '../vars/color.scss';
+
+#button{
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 20px 16px 20px;
+    border-radius: 4px;
+    background: $primary;
+    color: $tertiary;
+    transition: all ease 0.15s;
+    border: 1px solid $primary;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+
+    &.small{
+        font-size: 16px;
+        line-height: 20px; 
+        padding: 14px 16px 14px 16px;
+    }
+
+    &:hover{
+        background: $secondary;
+        border: 1px solid $secondary;
+    }
+
+    &:active{
+        background: $tertiary;
+        color: $primary;
+        border: 1px solid $primary;
+    }
+}

@@ -1,0 +1,17 @@
+$primary: #000000;
+$secondary: #404040;
+$tertiary: white;
+
+@each $variable, $value in (
+    primary: $primary,
+    secondary: $secondary,
+    white: $tertiary
+) {
+    .#{$variable} {
+        color: $value;
+    }
+
+    .bg-#{$variable} {
+        background: $value;
+    }
+}
