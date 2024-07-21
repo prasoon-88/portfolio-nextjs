@@ -1,36 +1,36 @@
 @import '../vars/color.scss';
 
-#button{
+#button {
     width: fit-content;
     display: flex;
     align-items: center;
     gap: 8px;
     padding: 16px 20px 16px 20px;
     border-radius: 4px;
-    background: $primary;
-    color: $tertiary;
+    background: $primary-black;
+    color: $primary-white;
     transition: all ease 0.15s;
-    border: 1px solid $primary;
+    border: 1px solid $primary-black;
     font-size: 20px;
     line-height: 24px;
     font-weight: 600;
     cursor: pointer;
     user-select: none;
 
-    &.small{
+    &.small {
         font-size: 16px;
-        line-height: 20px; 
+        line-height: 20px;
         padding: 14px 16px 14px 16px;
     }
 
-    &:hover{
-        background: $secondary;
-        border: 1px solid $secondary;
+    &:hover {
+        background: $primary-neutral;
+        border: 1px solid $primary-neutral;
     }
 
-    &:active{
-        background: $tertiary;
-        color: $primary;
-        border: 1px solid $primary;
+    &:active {
+        background: $primary-white;
+        color: $primary-black;
+        border: 1px solid $primary-black;
     }
 }
