@@ -1,7 +1,9 @@
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Button, { ButtonProps } from "../button";
-import DownloadSVG from "../../assets/svgs/download";
+import DownloadSVG from "@/assets/svgs/download";
+import HamBurger from "@/assets/svgs/hamburger";
+import classNames from "classnames";
 
 const Navbar = () => {
   const companyName = "Prasoon Asati";
@@ -37,34 +39,69 @@ const Navbar = () => {
       trailingIcon: <DownloadSVG />,
     },
   ];
+  const [sliderOpen, setSliderOpen] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (sliderOpen) {
+      // Disable scrolling
+      document.body.style.overflow = "hidden";
+    } else {
+      // Enable scrolling
+      document.body.style.overflow = "";
+    }
+  }, [sliderOpen]);
 
   return (
-    <div className="container mt-24 mb-24">
-      <div className="row">
-        <div className="col-md-12">
-          <nav id="navbar">
-            <section className="logoContainer">
-              <Image
-                src={logoConfig.src}
-                alt={logoConfig.alt}
-                width={logoConfig.width}
-                height={logoConfig.height}
-              />
-              <h5 className="bold primary-black">{companyName}</h5>
-            </section>
-            <ul className="navlinks-container">
-              {navItems.map((item, index) => (
-                <li key={index}>
-                  <a href={item.link}>{item.text}</a>
-                </li>
-              ))}
-            </ul>
-            <section className="actionsContainer">
-              {actions.map((action, index) => (
-                <Button key={index} {...action} />
-              ))}
-            </section>
-          </nav>
+    <div id="navContainer">
+      <div className="container">
+        <div className="row">
+          <div className="col-12 p-0">
+            <nav id="navbar" className={classNames({ sliderOpen })}>
+              <section
+                className="logoContainer"
+                onClick={() => setSliderOpen(!sliderOpen)}
+              >
+                <Image
+                  src={logoConfig.src}
+                  alt={logoConfig.alt}
+                  width={logoConfig.width}
+                  height={logoConfig.height}
+                />
+                <h5 className="bold primary-black">{companyName}</h5>
+              </section>
+              <ul className="navlinks-container">
+                {navItems.map((item, index) => (
+                  <li key={index}>
+                    <a href={item.link}>{item.text}</a>
+                  </li>
+                ))}
+              </ul>
+              <section className="actionsContainer">
+                {actions.map((action, index) => (
+                  <Button key={index} {...action} />
+                ))}
+              </section>
+              <div className="hamburgerContainer hide-on-dekstop">
+                <HamBurger onClick={() => setSliderOpen(!sliderOpen)} />
+              </div>
+            </nav>
+            {sliderOpen && (
+              <section id="navItemsSlider" className="hide-on-dekstop">
+                <ul className="navlinks-container">
+                  {navItems.map((item, index) => (
+                    <li key={index}>
+                      <a href={item.link}>{item.text}</a>
+                    </li>
+                  ))}
+                </ul>
+                <section className="actionsContainer">
+                  {actions.map((action, index) => (
+                    <Button key={index} {...action} />
+                  ))}
+                </section>
+              </section>
+            )}
+          </div>
         </div>
       </div>
     </div>

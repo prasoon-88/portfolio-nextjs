@@ -1,4 +1,3 @@
-import Navbar from "@/components/navbar";
 import { Html, Head, Main, NextScript } from "next/document";
 import Script from "next/script";
 
@@ -14,7 +13,6 @@ export default function Document() {
         />
       </Head>
       <body>
-        <Navbar />
         <Main />
         <Script
           src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

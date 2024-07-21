@@ -14,17 +14,30 @@ body {
     height: 100%;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-    all: unset;
-
-}
-
 .underline {
     text-decoration: underline;
+}
+
+.hide-on-mobile {
+    @media screen and (max-width:767px) {
+        display: none !important;
+    }
+}
+
+.hide-on-dekstop {
+    @media screen and (min-width:767px) {
+        display: none !important;
+    }
+}
+
+.show-on-dekstop {
+    @media screen and (min-width:767px) {
+        display: block !important;
+    }
+}
+
+.show-on-mobile {
+    @media screen and (max-width:767px) {
+        display: block !important;
+    }
 }

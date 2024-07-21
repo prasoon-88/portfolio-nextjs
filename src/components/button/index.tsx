@@ -17,10 +17,10 @@ const Button = ({
   trailingIcon = <></>,
 }: ButtonProps) => {
   return (
-    <div id="button" className={cx(size, className)} style={style}>
+    <button id="button" className={cx(size, className)} style={style}>
       <div>{text}</div>
       {trailingIcon}
-    </div>
+    </button>
   );
 };
 
