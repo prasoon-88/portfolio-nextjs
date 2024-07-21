@@ -1,0 +1,73 @@
+@import '../../styles/vars/fontWeight.scss';
+@import '../../styles/vars/color.scss';
+
+#testimonialCard {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    border-radius: 20px;
+    box-shadow: 0px 6px 8px -6px #18274B1F;
+    user-select: none;
+    cursor: pointer;
+
+    .imageContainer {
+        position: relative;
+
+        img {
+            border-radius: 50%;
+            object-fit: contain;
+            border: 1px solid $primary-black;
+        }
+
+        .frameImage {
+            right: 0px;
+            bottom: 0px;
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            font-weight: $extra-bold;
+            font-size: 24px;
+            line-height: 16px;
+            background: $primary-white;
+            color: $primary-black;
+        }
+    }
+
+    .blackStrip {
+        width: 30%;
+        background: $primary-black;
+        height: 2px;
+    }
+
+    h4,
+    p {
+        color: $primary-neutral;
+    }
+
+    h6 {
+        color: $zinc-500;
+    }
+
+    &.dark {
+        background: $primary-black;
+
+        h4,
+        h6,
+        p,
+        .blackStrip,
+        .frameImage {
+            color: $primary-white;
+
+        }
+
+        .frameImage {
+            background: $primary-black;
+        }
+    }
+
+}
