@@ -10,3 +10,42 @@ $zinc-500: #71717A;
 $zinc-800: #27272A;
 // Error color
 $error-500: #EF4444;
+
+// Primary colors classes
+.primary-black {
+    color: $primary-black;
+}
+
+.primary-neutral {
+    color: $primary-neutral;
+}
+
+.primary-white {
+    color: $primary-white;
+}
+
+// Zinc colors classes
+.zinc-100 {
+    color: $zinc-100;
+}
+
+.zinc-200 {
+    color: $zinc-200;
+}
+
+.zinc-300 {
+    color: $zinc-300;
+}
+
+.zinc-500 {
+    color: $zinc-500;
+}
+
+.zinc-800 {
+    color: $zinc-800;
+}
+
+// Error color class
+.error-500 {
+    color: $error-500;
+}

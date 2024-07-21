@@ -16,6 +16,7 @@ export default function Home() {
       <main className={sora.className}>
         <div className="container">
           <Button text="Add Me" size="small" />
+          <div className="fs-400">Hello thi</div>
         </div>
       </main>
     </>

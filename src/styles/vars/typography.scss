@@ -2,36 +2,42 @@ h1 {
     font-size: 36px;
     line-height: 44px;
     letter-spacing: -0.02em;
+    font-weight: 400;
 }
 
 h2 {
     font-size: 32px;
     line-height: 40px;
     letter-spacing: -0.02em;
+    font-weight: 400;
 }
 
 h3 {
     font-size: 28px;
     line-height: 32px;
     letter-spacing: -0.02em;
+    font-weight: 400;
 }
 
 h4 {
     font-size: 24px;
     line-height: 28px;
     letter-spacing: -0.02em;
+    font-weight: 400;
 }
 
 h5 {
     font-size: 20px;
     line-height: 24px;
     letter-spacing: -0.02em;
+    font-weight: 400;
 }
 
 h6 {
     font-size: 16px;
     line-height: 20px;
     letter-spacing: -0.02em;
+    font-weight: 400;
 }
 
 
@@ -39,6 +45,7 @@ p {
     font-size: 20px;
     line-height: 28px;
     letter-spacing: 0.02em;
+    font-weight: 400;
 
     &.medium {
         font-size: 16px;
@@ -52,6 +59,7 @@ p {
 }
 
 .outlined {
+    color: white;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
 }

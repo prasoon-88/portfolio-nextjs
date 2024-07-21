@@ -1,11 +1,15 @@
+$semi-bold: 600;
+$bold: 700;
+$extra-bold: 800;
+
 .semi-bold {
-    font-weight: 600;
+    font-weight: $semi-bold;
 }
 
 .bold {
-    font-weight: 700;
+    font-weight: $bold;
 }
 
 .extra-bold {
-    font-weight: 800;
+    font-weight: $extra-bold;
 }

@@ -1,0 +1,10 @@
+$i: 1;
+$limit: 500;
+
+@while($i<$limit) {
+    .fs-#{$i} {
+        font-size: #{$i}px;
+    }
+
+    $i : $i+1;
+}
