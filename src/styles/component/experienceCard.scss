@@ -1,0 +1,21 @@
+@import '../vars/color.scss';
+
+#experienceCard {
+    width: 100%;
+    padding: 30px 24px;
+    gap: 28px;
+    border-radius: 10px;
+    border: 1px solid $zinc-500;
+    cursor: pointer;
+    transition: all ease 0.1s;
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &:hover {
+        background: $zinc-100;
+    }
+}
