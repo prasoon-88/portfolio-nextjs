@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { Sora } from "next/font/google";
-import Button from "@/components/button";
+import Input from "@/components/input";
 
 const sora = Sora({ subsets: ["latin"] });
 
@@ -15,8 +15,7 @@ export default function Home() {
       </Head>
       <main className={sora.className}>
         <div className="container">
-          <Button text="Add Me" size="small" />
-          <div className="fs-400">Hello thi</div>
+          <Input type="email" helpText="sakhk" />
         </div>
       </main>
     </>
