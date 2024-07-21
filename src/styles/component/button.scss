@@ -17,6 +17,10 @@
     cursor: pointer;
     user-select: none;
 
+    svg {
+        fill: $primary-white;
+    }
+
     &.small {
         font-size: 16px;
         line-height: 20px;
@@ -32,5 +36,9 @@
         background: $primary-white;
         color: $primary-black;
         border: 1px solid $primary-black;
+
+        svg {
+            fill: $primary-black;
+        }
     }
 }

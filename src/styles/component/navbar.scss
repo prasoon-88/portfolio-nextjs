@@ -1,0 +1,55 @@
+@import '../vars/typography.scss';
+@import '../vars/fontWeight.scss';
+
+#navbar {
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.382);
+    backdrop-filter: blur(2px);
+    border-radius: 12px;
+
+    .logoContainer {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .navlinks-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+    }
+
+    .navlinks-container {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 32px;
+        font-weight: $semi-bold;
+
+        li {
+            cursor: pointer;
+        }
+    }
+
+    a {
+        @extend h5;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .actionsContainer {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+}

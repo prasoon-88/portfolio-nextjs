@@ -1,17 +1,25 @@
 import cx from "classnames";
-import React from "react";
+import React, { ReactNode } from "react";
 
-interface ButtonProps {
+export interface ButtonProps {
   text: string;
   size?: "small";
   className?: string;
   style?: any;
+  trailingIcon?: ReactNode;
 }
 
-const Button = ({ text, size, className, style }: ButtonProps) => {
+const Button = ({
+  text,
+  size,
+  className,
+  style,
+  trailingIcon = <></>,
+}: ButtonProps) => {
   return (
     <div id="button" className={cx(size, className)} style={style}>
-      {text}
+      <div>{text}</div>
+      {trailingIcon}
     </div>
   );
 };
