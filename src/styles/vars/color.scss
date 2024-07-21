@@ -1,17 +1,12 @@
-$primary: #000000;
-$secondary: #404040;
-$tertiary: white;
-
-@each $variable, $value in (
-    primary: $primary,
-    secondary: $secondary,
-    white: $tertiary
-) {
-    .#{$variable} {
-        color: $value;
-    }
-
-    .bg-#{$variable} {
-        background: $value;
-    }
-}
+// Primary colors
+$primary-black: #000000;
+$primary-neutral: #404040;
+$primary-white: #FFFFFF;
+// Zinc Colors aka secondary colors
+$zinc-100: #F4F4F5;
+$zinc-200: #E4E4E7;
+$zinc-300: #D4D4D8;
+$zinc-500: #71717A;
+$zinc-800: #27272A;
+// Error color
+$error-500: #EF4444;

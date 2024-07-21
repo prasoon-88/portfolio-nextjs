@@ -2,13 +2,18 @@
 @import './component/index.scss';
 @import './pages/index.scss';
 
-*{
-    margin: 0;padding: 0;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-html,body{
+html,
+body {
     width: 100%;
     height: 100%;
 }
 
+.underline {
+    text-decoration: underline;
+}
