@@ -1,10 +1,8 @@
-import Image from "next/image";
-import React from "react";
+import React, { ReactNode } from "react";
 
-interface ExperienceCardProps {
+export interface ExperienceCardProps {
   title: string;
-  company: string;
-  logo: string;
+  logo: ReactNode;
   startDate: string;
   endDate: string;
   description: string;
@@ -13,7 +11,6 @@ interface ExperienceCardProps {
 const ExperienceCard = ({
   title,
   description,
-  company,
   endDate,
   startDate,
   logo,
@@ -29,7 +26,7 @@ const ExperienceCard = ({
           {startDate} - {endDate}
         </h6>
       </div>
-      <p className="medium zinc-300">{description}</p>
+      <p className="medium zinc-300 mt-28">{description}</p>
     </div>
   );
 };

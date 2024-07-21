@@ -7,6 +7,10 @@ import GithubSVG from "@/assets/svgs/github";
 import Button from "@/components/button";
 import SkillCard from "@/components/skillCard";
 import ReactSVG from "@/assets/svgs/react";
+import ExperienceCard, {
+  ExperienceCardProps,
+} from "@/components/experienceCard";
+import Image from "next/image";
 
 const sora = Sora({ subsets: ["latin"] });
 
@@ -116,6 +120,44 @@ const MySkills = () => {
   );
 };
 
+const ExperieceSection = () => {
+  const EXPERIENCES: ExperienceCardProps[] = [
+    {
+      description:
+        "Developed and maintained the company’s website and internal tools. Worked on the frontend and backend of the website, ensuring a seamless user experience. Implemented new features and optimized the website for performance.",
+      title: "Full Stack Developer",
+      logo: (
+        <Image
+          src="https://yt3.googleusercontent.com/EtQj75H5MarhnBElxe09Y3X1VmHhC435JtsdD4nOaTQGKTe69BngoqNxvK08s_o-ywFHnKuPRA=s900-c-k-c0x00ffffff-no-rj"
+          alt="Launcheazy"
+          width={32}
+          height={32}
+        />
+      ),
+      startDate: "Aug 2023",
+      endDate: "Present",
+    },
+  ];
+  return (
+    <div className="experinceSection">
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <div className="fs-48 lh-56 primary-white text-center">
+              <span>My</span>
+              <span className="extra-bold"> Experiences</span>
+            </div>
+            <div className="experinceContainer">
+              {EXPERIENCES.map((experience, index) => (
+                <ExperienceCard key={index} {...experience} />
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 export default function Home() {
   return (
     <>
@@ -128,6 +170,7 @@ export default function Home() {
       <main id="home" className={sora.className}>
         <HeroSection />
         <MySkills />
+        <ExperieceSection />
       </main>
     </>
   );
