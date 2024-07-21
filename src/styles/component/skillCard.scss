@@ -9,12 +9,15 @@
     justify-content: center;
     gap: 32px;
     border-radius: 4px;
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all ease 0.15s;
+    cursor: pointer;
 
     svg {
-        path {
-            fill: $primary-black;
-        }
+        width: 72px;
+        height: 72px;
     }
 
     &.dark {
@@ -26,4 +29,8 @@
         }
     }
 
+    &:hover {
+        box-shadow: 0 0 4px 4px $zinc-200;
+        scale: 1.02;
+    }
 }

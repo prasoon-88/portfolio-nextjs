@@ -11,6 +11,17 @@ import ExperienceCard, {
   ExperienceCardProps,
 } from "@/components/experienceCard";
 import Image from "next/image";
+import NextJs from "@/assets/svgs/NextJs";
+import Typescript from "@/assets/svgs/Typescript";
+import Sass from "@/assets/svgs/Sass";
+import Django from "@/assets/svgs/django";
+import Python from "@/assets/svgs/Python";
+import PostgresSQL from "@/assets/svgs/PostgresSQL";
+import MongoDB from "@/assets/svgs/MongoDB";
+import SocketIo from "@/assets/svgs/SocketIo";
+import Javascript from "@/assets/svgs/Javascript";
+import Express from "@/assets/svgs/Express";
+import useMousePosition from "@/customHooks/useMousePosition";
 
 const sora = Sora({ subsets: ["latin"] });
 
@@ -82,21 +93,18 @@ const HeroSection = () => {
 
 const MySkills = () => {
   const SKILLS = [
-    { title: "Next.js", dark: true },
+    { title: "Next.js", icon: <NextJs /> },
     { title: "React.js", icon: <ReactSVG /> },
-    { title: "TypeScript", dark: true },
+    { title: "Python", icon: <Python /> },
+    { title: "TypeScript", icon: <Typescript /> },
     { title: "Git", icon: <GithubSVG width={62} height={62} /> },
-    { title: "SASS", dark: true },
-    { title: "Tailwind CSS" },
-    { title: "Django", dark: true },
-    { title: "Python" },
-    { title: "SQL", dark: true },
-    { title: "PostgreSQL" },
-    { title: "MongoDB", dark: true },
-    { title: "WebSockets" },
-    { title: "HTML", dark: true },
-    { title: "CSS" },
-    { title: "JavaScript", dark: true },
+    { title: "PostgreSQL", icon: <PostgresSQL /> },
+    { title: "SASS", icon: <Sass /> },
+    { title: "Express", icon: <Express /> },
+    { title: "Django", icon: <Django /> },
+    { title: "MongoDB", icon: <MongoDB /> },
+    { title: "WebSockets", icon: <SocketIo /> },
+    { title: "JavaScript", icon: <Javascript /> },
   ];
 
   return (

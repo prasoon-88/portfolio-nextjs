@@ -10,12 +10,12 @@
 
     #navbar {
         margin: 24px 0;
-        padding: 0 32px;
+        padding: 12px 32px;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        background: rgba(255, 255, 255, 0.382);
-        backdrop-filter: blur(2px);
+        background: rgb(212, 212, 212, 0.2);
+        backdrop-filter: blur(4px);
         border-radius: 12px;
         z-index: 5;
 
@@ -25,6 +25,10 @@
             gap: 12px;
             cursor: pointer;
             user-select: none;
+
+            h5 {
+                margin: 0;
+            }
         }
 
         .navlinks-container {

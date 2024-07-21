@@ -17,8 +17,10 @@
     font-weight: 600;
     cursor: pointer;
     user-select: none;
+    z-index: 8;
 
-    svg {
+    svg,
+    path {
         fill: $primary-white;
         width: 24px;
         height: 24px;
