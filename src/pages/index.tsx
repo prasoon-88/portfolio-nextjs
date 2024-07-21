@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { Sora } from "next/font/google";
 import Input from "@/components/input";
+import TextArea from "@/components/textarea";
 
 const sora = Sora({ subsets: ["latin"] });
 
@@ -16,6 +17,7 @@ export default function Home() {
       <main className={sora.className}>
         <div className="container">
           <Input type="email" helpText="sakhk" />
+          <TextArea helpText="sakhk" />
         </div>
       </main>
     </>
