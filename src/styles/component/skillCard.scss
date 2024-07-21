@@ -11,6 +11,12 @@
     border-radius: 4px;
     display: grid;
 
+    svg {
+        path {
+            fill: $primary-black;
+        }
+    }
+
     &.dark {
         background: $primary-black;
         color: $primary-white;

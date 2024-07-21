@@ -5,6 +5,8 @@ import { Sora } from "next/font/google";
 import EmailSvg from "@/assets/svgs/email";
 import GithubSVG from "@/assets/svgs/github";
 import Button from "@/components/button";
+import SkillCard from "@/components/skillCard";
+import ReactSVG from "@/assets/svgs/react";
 
 const sora = Sora({ subsets: ["latin"] });
 
@@ -74,6 +76,46 @@ const HeroSection = () => {
   );
 };
 
+const MySkills = () => {
+  const SKILLS = [
+    { title: "Next.js", dark: true },
+    { title: "React.js", icon: <ReactSVG /> },
+    { title: "TypeScript", dark: true },
+    { title: "Git", icon: <GithubSVG width={62} height={62} /> },
+    { title: "SASS", dark: true },
+    { title: "Tailwind CSS" },
+    { title: "Django", dark: true },
+    { title: "Python" },
+    { title: "SQL", dark: true },
+    { title: "PostgreSQL" },
+    { title: "MongoDB", dark: true },
+    { title: "WebSockets" },
+    { title: "HTML", dark: true },
+    { title: "CSS" },
+    { title: "JavaScript", dark: true },
+  ];
+
+  return (
+    <div className="container">
+      <div className="row">
+        <div className="col-12">
+          <div className="mySkillsScetion">
+            <div className="fs-48 lh-56 primary-black ">
+              <span>My</span>
+              <span className="extra-bold"> Skills</span>
+            </div>
+            <div className="skillsContainer">
+              {SKILLS.map((skill, index) => (
+                <SkillCard key={index} {...skill} />
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export default function Home() {
   return (
     <>
@@ -85,6 +127,7 @@ export default function Home() {
       </Head>
       <main id="home" className={sora.className}>
         <HeroSection />
+        <MySkills />
       </main>
     </>
   );

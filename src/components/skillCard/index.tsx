@@ -1,11 +1,17 @@
-import ReactSVG from "@/assets/svgs/react";
-import React from "react";
+import classNames from "classnames";
+import React, { ReactNode } from "react";
 
-const SkillCard = () => {
+interface SkillCardProps {
+  icon?: ReactNode;
+  title: string;
+  dark?: boolean;
+}
+
+const SkillCard = ({ icon, title, dark }: SkillCardProps) => {
   return (
-    <div id="skillCard">
-      <ReactSVG />
-      <h5 className="bold primary-black">React</h5>
+    <div id="skillCard" className={classNames({ dark })}>
+      {icon}
+      <h5 className="bold">{title}</h5>
     </div>
   );
 };
