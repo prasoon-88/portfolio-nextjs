@@ -2,7 +2,7 @@ import cx from "classnames";
 import React, { ReactNode } from "react";
 
 export interface ButtonProps {
-  text: string;
+  text: ReactNode;
   size?: "small";
   className?: string;
   style?: any;

@@ -6,6 +6,7 @@
     width: 100%;
     position: sticky;
     top: 0;
+    z-index: 2;
 
     #navbar {
         margin: 24px 0;
@@ -72,7 +73,7 @@
         }
 
 
-        @media screen and (max-width:767px) {
+        @media screen and (max-width:768px) {
             margin: 0;
             padding: 12px 24px;
 
@@ -156,7 +157,7 @@
         }
     }
 
-    @media screen and (min-width:767px) {
+    @media screen and (min-width:768px) {
         #navItemsSlider {
             background: $primary-white;
         }

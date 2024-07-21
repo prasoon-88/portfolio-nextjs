@@ -19,25 +19,25 @@ body {
 }
 
 .hide-on-mobile {
-    @media screen and (max-width:767px) {
+    @media screen and (max-width:768px) {
         display: none !important;
     }
 }
 
 .hide-on-dekstop {
-    @media screen and (min-width:767px) {
+    @media screen and (min-width:768px) {
         display: none !important;
     }
 }
 
 .show-on-dekstop {
-    @media screen and (min-width:767px) {
+    @media screen and (min-width:768px) {
         display: block !important;
     }
 }
 
 .show-on-mobile {
-    @media screen and (max-width:767px) {
+    @media screen and (max-width:768px) {
         display: block !important;
     }
 }
