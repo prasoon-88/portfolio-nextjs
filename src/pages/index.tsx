@@ -14,7 +14,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={sora.className}>
-        <Button text="Add Me" size="small" />
+        <div className="container">
+          <Button text="Add Me" size="small" />
+        </div>
       </main>
     </>
   );
