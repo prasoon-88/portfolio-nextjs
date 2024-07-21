@@ -1,0 +1,23 @@
+@import './../vars/color.scss';
+
+#skillCard {
+    border: 2px solid $primary-black;
+    color: $primary-black;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    border-radius: 4px;
+    display: grid;
+
+    &.dark {
+        background: $primary-black;
+        color: $primary-white;
+
+        svg {
+            fill: $primary-white;
+        }
+    }
+
+}

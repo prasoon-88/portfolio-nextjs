@@ -2,6 +2,7 @@ import Head from "next/head";
 import { Sora } from "next/font/google";
 import TestimonialCard from "@/components/testimonialCard";
 import Input from "@/components/input";
+import SkillCard from "@/components/skillCard";
 
 const sora = Sora({ subsets: ["latin"] });
 
@@ -16,45 +17,7 @@ export default function Home() {
       </Head>
       <main className={sora.className}>
         <div className="container mt-60">
-          <Input />
-          <Input />
-          <Input />
-          <Input />
-          <Input />
-          <Input />
-          <Input />
-          <Input />
-          <Input />
-          <Input />
-          <Input />
-          <Input />
-          <Input />
-          <Input />
-          <Input />
-          <Input />
-          <Input />
-          <Input />
-          <Input />
-          <Input />
-          <Input />
-          <Input />
-          <Input />
-          <Input />
-          <Input />
-          <Input />
-          <Input />
-          <Input />
-          <Input />
-          <Input />
-          <Input />
-          <Input />
-          <Input />
-          <Input />
-          <Input />
-          <Input />
-          <Input />
-          <Input />
-          <Input />
+          <SkillCard />
         </div>
       </main>
     </>

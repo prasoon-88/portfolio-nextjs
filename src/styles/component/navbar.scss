@@ -63,11 +63,11 @@
             border-radius: 50%;
 
             &:hover {
-                background: rgba(163, 160, 160, 0.1);
+                background: $zinc-100;
             }
 
             &:active {
-                background: rgba(82, 80, 80, 0.1);
+                background: $zinc-200;
             }
         }
 
