@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-
 import Head from "next/head";
 import { Sora } from "next/font/google";
 import EmailSvg from "@/assets/svgs/email";
@@ -50,7 +49,7 @@ const HeroSection = () => {
     <div className="container">
       <div className="heroSection">
         <div className="row">
-          <div className="col-lg-6 col-md-8 col-12">
+          <div className="col-md-6 col-12">
             <div className="introContianer">
               <div className="introduction">
                 <div className="primary-black">Hello I’am</div>
@@ -90,7 +89,7 @@ const HeroSection = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-6 col-md-4 col-12">
+          <div className="col-md-6 col-12">
             <div className="heroImageContainer">
               <img src={"/manWithDevice.png"} alt="HeroImage" />
             </div>
@@ -200,23 +199,23 @@ const AboutMe = () => {
       <div className="row">
         <div className="col-md-5 col-12">
           <div className="aboutImageContainer">
-            <img src="/manWithWindow.png" alt="HeroImage" />
+            <img src="/manWithWindow.png" className="reveal" alt="HeroImage" />
           </div>
         </div>
         <div className="col-md-7 col-12">
           <div className="d-flex flex-column justify-content-center h-100 aboutme">
-            <div className="fs-48 lh-56 primary-black">
+            <div className="fs-48 lh-56 primary-black reveal">
               <span>About</span>
               <span className="extra-bold"> Me</span>
             </div>
-            <p className="medium zinc-500 mb-20 mt-40">
+            <p className="medium zinc-500 mb-20 mt-40 reveal">
               {`I'm`} a passionate, self-proclaimed designer who specializes in
               full stack development. I am very enthusiastic about bringing the
               technical and visual aspects of digital products to life. User
               experience, pixel perfect design, and writing clear, readable,
               highly performant code matters to me.
             </p>
-            <p className="medium zinc-500 mb-20">
+            <p className="medium zinc-500 mb-20 reveal">
               I began my journey as a web developer in 2023, and since then,
               {`I've`} continued to grow and evolve as a developer, taking on
               new challenges and learning the latest technologies along the way.
@@ -225,7 +224,7 @@ const AboutMe = () => {
               applications using modern technologies such as Next.js,
               TypeScript, Nestjs, Tailwindcss, Supabase and much more.
             </p>
-            <p className="medium zinc-500">
+            <p className="medium zinc-500 reveal">
               When {`I'm`} not in full-on developer mode, you can find me
               hovering around on twitter or on indie hacker, witnessing the
               journey of early startups or enjoying some free time. You can

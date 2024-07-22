@@ -42,10 +42,10 @@ const Footer = () => {
     e.preventDefault();
   };
   return (
-    <div id="footer">
+    <div id="footer" className="">
       <div className="container">
         <div className="row">
-          <div className="col-12 hide-on-dekstop mt-80">
+          <div className="col-12 hide-on-dekstop mt-80 reveal">
             <div className="contentContainer p-0 h-100 d-flex algin-items-center justify-content-center flex-column">
               <div className="introduction fs-48 lh-56 extra-bold primary-black justify-content-center">
                 <div className="primary-black extra-bold">Let’s</div>
@@ -79,7 +79,7 @@ const Footer = () => {
               </h3>
             </div>
           </div>
-          <div className="col-md-5 col-12">
+          <div className="col-md-5 col-12 reveal">
             <form className="footerForm" onSubmit={handleSubmit}>
               <Input placeholder="Your Name*" />
               <Input placeholder="Email*" type="email" />
@@ -106,7 +106,7 @@ const Footer = () => {
               </div>
             </form>
           </div>
-          <div className="col-md-7 col-12 hide-on-mobile">
+          <div className="col-md-7 col-12 hide-on-mobile reveal">
             <div className="contentContainer h-100 d-flex algin-items-center justify-content-center flex-column">
               <div className="introduction fs-48 lh-56 extra-bold primary-black">
                 <div className="primary-black extra-bold">Let’s</div>

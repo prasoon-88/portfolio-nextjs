@@ -83,15 +83,18 @@ const Navbar = () => {
                   <Button key={index} {...action} />
                 ))}
               </section>
-              <div className="hamburgerContainer hide-on-dekstop">
-                <HamBurger onClick={() => setSliderOpen(!sliderOpen)} />
+              <div
+                className="hamburgerContainer hide-on-dekstop"
+                onClick={() => setSliderOpen(!sliderOpen)}
+              >
+                <HamBurger />
               </div>
             </nav>
             {sliderOpen && (
               <section id="navItemsSlider" className="hide-on-dekstop">
                 <ul className="navlinks-container">
                   {navItems.map((item, index) => (
-                    <li key={index}>
+                    <li key={index} onClick={() => setSliderOpen(false)}>
                       <a href={item.link}>{item.text}</a>
                     </li>
                   ))}

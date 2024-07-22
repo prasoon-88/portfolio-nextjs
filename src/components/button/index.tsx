@@ -8,6 +8,7 @@ export interface ButtonProps {
   style?: any;
   trailingIcon?: ReactNode;
   type?: "button" | "submit" | "reset";
+  onClick?: any;
 }
 
 const Button = ({
@@ -17,6 +18,7 @@ const Button = ({
   style,
   trailingIcon = <></>,
   type,
+  onClick = () => {},
 }: ButtonProps) => {
   return (
     <button
@@ -24,6 +26,7 @@ const Button = ({
       className={cx(size, className)}
       style={style}
       type={type}
+      onClick={onClick}
     >
       <div>{text}</div>
       {trailingIcon}
