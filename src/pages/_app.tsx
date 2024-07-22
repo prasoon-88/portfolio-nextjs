@@ -3,6 +3,7 @@ import Navbar from "@/components/navbar";
 import type { AppProps } from "next/app";
 import { useEffect } from "react";
 import Footer from "@/components/footer";
+import MouseTracker from "@/components/mouseMovementTracker";
 
 export default function App({ Component, pageProps }: AppProps) {
   const handleReveal = () => {
@@ -32,7 +33,7 @@ export default function App({ Component, pageProps }: AppProps) {
   }, []);
   return (
     <>
-      {/* <MouseTracker /> */}
+      <MouseTracker />
       <Navbar />
       <Component {...pageProps} />
       <Footer />

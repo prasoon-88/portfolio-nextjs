@@ -28,8 +28,8 @@ const MouseTracker = () => {
     <div
       id="mouseMovementTracker"
       style={{
-        top: `${y - 10}px`,
-        left: `${x - 10}px`,
+        top: `${y + 10}px`,
+        left: `${x + 10}px`,
         transform: `scale(${scale})`,
       }}
     ></div>
