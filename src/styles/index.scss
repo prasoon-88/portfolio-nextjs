@@ -44,6 +44,7 @@ body {
     }
 }
 
+// Reveal Animation Class
 .reveal {
     opacity: 0;
 
@@ -53,6 +54,7 @@ body {
     }
 }
 
+// Reveal Animation 
 @keyframes revealAnimation {
     0% {
         opacity: 0;

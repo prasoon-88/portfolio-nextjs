@@ -5,7 +5,7 @@ interface TextAreaProps extends InputHTMLAttributes<HTMLTextAreaElement> {
 const TextArea = (props: TextAreaProps) => {
   return (
     <div id="inputContainer">
-      <textarea {...props} id="inputBox" />
+      <textarea {...props} id="inputBox" rows={4} />
       <h6 className="helpText mt-12 error-500">{props.helpText || ""}</h6>
     </div>
   );
