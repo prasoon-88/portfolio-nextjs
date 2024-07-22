@@ -42,3 +42,24 @@ body {
         display: block !important;
     }
 }
+
+.reveal {
+    opacity: 0;
+
+    &.active {
+        animation: revealAnimation 0.4s ease-in-out;
+        opacity: 1;
+    }
+}
+
+@keyframes revealAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

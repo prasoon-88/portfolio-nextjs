@@ -117,13 +117,15 @@ const MySkills = () => {
       <div className="row">
         <div className="col-12">
           <div className="mySkillsScetion">
-            <div className="fs-48 lh-56 primary-black ">
+            <div className="fs-48 lh-56 primary-black reveal">
               <span>My</span>
               <span className="extra-bold"> Skills</span>
             </div>
             <div className="skillsContainer">
               {SKILLS.map((skill, index) => (
-                <SkillCard key={index} {...skill} />
+                <div key={index} className="reveal">
+                  <SkillCard {...skill} />
+                </div>
               ))}
             </div>
           </div>
@@ -171,11 +173,11 @@ const ExperieceSection = () => {
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <div className="fs-48 lh-56 primary-white text-center">
+            <div className="fs-48 lh-56 primary-white text-center reveal">
               <span>My</span>
               <span className="extra-bold"> Experiences</span>
             </div>
-            <div className="experinceContainer">
+            <div className="experinceContainer reveal">
               {EXPERIENCES.map((experience, index) => (
                 <ExperienceCard key={index} {...experience} />
               ))}
