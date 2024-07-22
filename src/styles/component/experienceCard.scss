@@ -18,4 +18,13 @@
     &:hover {
         background: $zinc-800;
     }
+
+    @media screen and (max-width:768px) {
+        .header {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
+        }
+
+    }
 }

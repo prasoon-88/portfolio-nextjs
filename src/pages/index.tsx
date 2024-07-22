@@ -21,14 +21,15 @@ import MongoDB from "@/assets/svgs/MongoDB";
 import SocketIo from "@/assets/svgs/SocketIo";
 import Javascript from "@/assets/svgs/Javascript";
 import Express from "@/assets/svgs/Express";
-import useMousePosition from "@/customHooks/useMousePosition";
+import Linkedin from "@/assets/svgs/Linkedin";
+import Phone from "@/assets/svgs/Phone";
 
 const sora = Sora({ subsets: ["latin"] });
 
 const HeroSection = () => {
   const SocialLinks = [
     {
-      icon: <GithubSVG />,
+      icon: <Linkedin />,
       link: "https://www.linkedin.com/in/prasoon-asati-01a843196/",
     },
     {
@@ -36,8 +37,12 @@ const HeroSection = () => {
       link: "https://github.com/prasoon-88",
     },
     {
-      icon: <GithubSVG />,
+      icon: <EmailSvg />,
       link: "mailto:prasouna@gmail.com",
+    },
+    {
+      icon: <Phone />,
+      link: "call:+919442415952",
     },
   ];
   return (
@@ -132,8 +137,8 @@ const ExperieceSection = () => {
   const EXPERIENCES: ExperienceCardProps[] = [
     {
       description:
-        "Developed and maintained the company’s website and internal tools. Worked on the frontend and backend of the website, ensuring a seamless user experience. Implemented new features and optimized the website for performance.",
-      title: "Full Stack Developer",
+        "As a key developer at Launcheazy, I have spearheaded the design and maintenance of our platform’s entire frontend. Launcheazy is an innovative digital marketing and AI-powered email outreach platform that leverages advanced AI technologies to automate and optimize email marketing campaigns. My responsibilities encompass the full spectrum of frontend development, ensuring a seamless, user-friendly interface that enhances user engagement and experience. From conceptualizing intuitive designs to implementing responsive web applications, I have played a crucial role in bringing our platform to life and continually improving its functionality.",
+      title: "SDE-1 at Launcheazy",
       logo: (
         <Image
           src="https://yt3.googleusercontent.com/EtQj75H5MarhnBElxe09Y3X1VmHhC435JtsdD4nOaTQGKTe69BngoqNxvK08s_o-ywFHnKuPRA=s900-c-k-c0x00ffffff-no-rj"
@@ -144,6 +149,21 @@ const ExperieceSection = () => {
       ),
       startDate: "Aug 2023",
       endDate: "Present",
+    },
+    {
+      description:
+        "At Netro, I developed and maintained their platform using Sass, React, and TypeScript. Working closely with the team, I ensured the codebase is clean and scalable, creating responsive and user-friendly interfaces that enhance user experience and support Netro's growth.",
+      title: "Frontend Developer Intern",
+      logo: (
+        <Image
+          src="https://media.licdn.com/dms/image/D4D0BAQG0sxMyv55GEg/company-logo_100_100/0/1719245379311/codewebsolution_logo?e=1729728000&v=beta&t=Ye_Qlccygmzt2X61As43QTreKEEb1cRodbU9ayyuBAg"
+          alt="Launcheazy"
+          width={32}
+          height={32}
+        />
+      ),
+      startDate: "March 2023",
+      endDate: "July 2023",
     },
   ];
   return (

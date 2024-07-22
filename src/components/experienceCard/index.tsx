@@ -20,13 +20,13 @@ const ExperienceCard = ({
       <div className="header">
         <div className="d-flex align-items-center" style={{ gap: 30 }}>
           {logo}
-          <h4 className="semi-bold primary-white">{title}</h4>
+          <h4 className="semi-bold primary-white m-0">{title}</h4>
         </div>
-        <h6 className="semi-bold zinc-300">
+        <h6 className="semi-bold zinc-300 m-0">
           {startDate} - {endDate}
         </h6>
       </div>
-      <p className="medium zinc-300 mt-28">{description}</p>
+      <p className="medium zinc-300 mt-28 mb-0">{description}</p>
     </div>
   );
 };
