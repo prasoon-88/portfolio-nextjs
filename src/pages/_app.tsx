@@ -2,6 +2,7 @@ import "@/styles/index.scss";
 import Navbar from "@/components/navbar";
 import type { AppProps } from "next/app";
 import { useEffect } from "react";
+import Footer from "@/components/footer";
 
 export default function App({ Component, pageProps }: AppProps) {
   const handleReveal = () => {
@@ -20,6 +21,7 @@ export default function App({ Component, pageProps }: AppProps) {
   };
 
   useEffect(() => {
+    handleReveal();
     if (typeof window !== "undefined" && typeof document !== `undefined`) {
       window.addEventListener("scroll", handleReveal);
 
@@ -33,6 +35,7 @@ export default function App({ Component, pageProps }: AppProps) {
       {/* <MouseTracker /> */}
       <Navbar />
       <Component {...pageProps} />
+      <Footer />
     </>
   );
 }

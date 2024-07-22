@@ -23,6 +23,7 @@ import Javascript from "@/assets/svgs/Javascript";
 import Express from "@/assets/svgs/Express";
 import Linkedin from "@/assets/svgs/Linkedin";
 import Phone from "@/assets/svgs/Phone";
+import Link from "next/link";
 
 const sora = Sora({ subsets: ["latin"] });
 
@@ -78,7 +79,11 @@ const HeroSection = () => {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      <Button className="primary" text={link.icon} />
+                      <Button
+                        className="primary"
+                        text={link.icon}
+                        size="small"
+                      />
                     </a>
                   );
                 })}
@@ -188,6 +193,60 @@ const ExperieceSection = () => {
     </div>
   );
 };
+
+const AboutMe = () => {
+  return (
+    <div className="container pt-60 pb-60 aboutMeContainer">
+      <div className="row">
+        <div className="col-md-5 col-12">
+          <div className="aboutImageContainer">
+            <img src="/manWithWindow.png" alt="HeroImage" />
+          </div>
+        </div>
+        <div className="col-md-7 col-12">
+          <div className="d-flex flex-column justify-content-center h-100 aboutme">
+            <div className="fs-48 lh-56 primary-black">
+              <span>About</span>
+              <span className="extra-bold"> Me</span>
+            </div>
+            <p className="medium zinc-500 mb-20 mt-40">
+              {`I'm`} a passionate, self-proclaimed designer who specializes in
+              full stack development. I am very enthusiastic about bringing the
+              technical and visual aspects of digital products to life. User
+              experience, pixel perfect design, and writing clear, readable,
+              highly performant code matters to me.
+            </p>
+            <p className="medium zinc-500 mb-20">
+              I began my journey as a web developer in 2023, and since then,
+              {`I've`} continued to grow and evolve as a developer, taking on
+              new challenges and learning the latest technologies along the way.
+              Now, in my early thirties, 1.5 years after starting my web
+              development journey, {`I'm`} building cutting-edge web
+              applications using modern technologies such as Next.js,
+              TypeScript, Nestjs, Tailwindcss, Supabase and much more.
+            </p>
+            <p className="medium zinc-500">
+              When {`I'm`} not in full-on developer mode, you can find me
+              hovering around on twitter or on indie hacker, witnessing the
+              journey of early startups or enjoying some free time. You can
+              follow me on Twitter where I share tech-related bites and build in
+              public, or you can follow me on{" "}
+              <Link
+                href={"https://github.com/prasoon-88"}
+                className="primary-black"
+                style={{ textDecoration: "none" }}
+                target="_blank"
+              >
+                GitHub
+              </Link>
+              .
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 export default function Home() {
   return (
     <>
@@ -201,6 +260,7 @@ export default function Home() {
         <HeroSection />
         <MySkills />
         <ExperieceSection />
+        <AboutMe />
       </main>
     </>
   );

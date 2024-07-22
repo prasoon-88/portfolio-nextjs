@@ -1,0 +1,57 @@
+@import '../vars/color.scss';
+
+#footer {
+    .footerForm {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: 80px 0;
+
+        .btn-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            gap: 8px;
+        }
+
+        
+    }
+
+    .contentContainer {
+        padding-left: 80px;
+    }
+
+    .introduction {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .bottomBar {
+        width: 100%;
+        background: $primary-black;
+        padding: 24px 80px;
+
+        main {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logoContainer {
+            filter: invert(1);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .copyrightContainer {
+            color: $primary-white;
+        }
+
+        @media screen and (max-width: 768px) {
+            padding: 24px;
+        }
+    }
+}

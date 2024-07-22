@@ -5,7 +5,7 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 const Input = (props: InputProps) => {
   return (
     <div id="inputContainer">
-      <input {...props} />
+      <input {...props} id="inputBox" />
       <h6 className="helpText mt-12 error-500">{props.helpText || ""}</h6>
     </div>
   );
