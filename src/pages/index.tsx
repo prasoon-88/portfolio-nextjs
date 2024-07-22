@@ -118,7 +118,7 @@ const MySkills = () => {
   ];
 
   return (
-    <div className="container">
+    <div id="skill" className="container">
       <div className="row">
         <div className="col-12">
           <div className="mySkillsScetion">
@@ -196,7 +196,7 @@ const ExperieceSection = () => {
 
 const AboutMe = () => {
   return (
-    <div className="container pt-60 pb-60 aboutMeContainer">
+    <div id="aboutMe" className="container pt-120 pb-120 aboutMeContainer">
       <div className="row">
         <div className="col-md-5 col-12">
           <div className="aboutImageContainer">

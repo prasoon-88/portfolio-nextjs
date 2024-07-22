@@ -28,7 +28,7 @@ const Navbar = () => {
     },
     {
       text: "Contact Me",
-      link: "#contactme",
+      link: "#footer",
     },
   ];
   const actions: ButtonProps[] = [
@@ -59,7 +59,9 @@ const Navbar = () => {
             <nav id="navbar" className={classNames({ sliderOpen })}>
               <section
                 className="logoContainer"
-                onClick={() => setSliderOpen(!sliderOpen)}
+                onClick={() => {
+                  window.scrollTo(0, 0);
+                }}
               >
                 <Image
                   src={logoConfig.src}
