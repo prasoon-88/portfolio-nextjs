@@ -6,11 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "classnames": "^2.5.1",
     "next": "14.2.5",
+    "next-sitemap": "^4.2.3",
     "react": "^18",
     "react-confetti": "^6.1.0",
     "react-dom": "^18",

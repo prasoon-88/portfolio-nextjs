@@ -1,4 +1,9 @@
-Sitemap: https://prasoonasati.me/sitemap.xml
-
+# *
 User-agent: *
-Allow: /*
+Allow: /
+
+# Host
+Host: https://prasoonasati.me
+
+# Sitemaps
+Sitemap: https://prasoonasati.me/sitemap.xml
