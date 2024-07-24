@@ -30,7 +30,7 @@ const MouseTracker = () => {
       style={{
         top: `${y + 10}px`,
         left: `${x + 10}px`,
-        transform: `scale(${scale})`,
+        // transform: `scale(${scale})`,
       }}
     ></div>
   );

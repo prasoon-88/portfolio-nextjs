@@ -1,0 +1,4 @@
+Sitemap: https://prasoonasati.me/sitemap.xml
+
+User-agent: *
+Allow: /*

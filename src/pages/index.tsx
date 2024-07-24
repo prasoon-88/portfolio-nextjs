@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import Head from "next/head";
 import { Sora } from "next/font/google";
 import EmailSvg from "@/assets/svgs/email";
 import GithubSVG from "@/assets/svgs/github";
@@ -248,19 +247,11 @@ const AboutMe = () => {
 };
 export default function Home() {
   return (
-    <>
-      <Head>
-        <title>Prasoon Asati</title>
-        <meta name="description" content="Prasoon Asati's Portfolio website" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <main id="home" className={sora.className}>
-        <HeroSection />
-        <MySkills />
-        <ExperieceSection />
-        <AboutMe />
-      </main>
-    </>
+    <main id="home" className={sora.className}>
+      <HeroSection />
+      <MySkills />
+      <ExperieceSection />
+      <AboutMe />
+    </main>
   );
 }
