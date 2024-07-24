@@ -51,10 +51,7 @@ export default function App({ Component, pageProps }: AppProps) {
           property="og:description"
           content="Prasoon Asati's Portfolio - Full Stack Developer skilled in React, Next.js, TypeScript, SASS, Tailwind, Python, Django, and more."
         />
-        <meta
-          property="og:image"
-          content="https://www.prasoonasati.me/metaImage.png"
-        />
+        <meta property="og:image" content="/metaImage.png" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content="prasoonasati.me" />
@@ -67,10 +64,7 @@ export default function App({ Component, pageProps }: AppProps) {
           name="twitter:description"
           content="Prasoon Asati's Portfolio - Full Stack Developer skilled in React, Next.js, TypeScript, SASS, Tailwind, Python, Django, and more."
         />
-        <meta
-          name="twitter:image"
-          content="https://www.prasoonasati.me/metaImage.png"
-        />
+        <meta name="twitter:image" content="/metaImage.png" />
 
         <link rel="canonical" href="https://www.prasoonasati.me/" />
         <link rel="icon" href="/pLogo.png" />
