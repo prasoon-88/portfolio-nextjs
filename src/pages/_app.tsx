@@ -40,7 +40,10 @@ export default function App({ Component, pageProps }: AppProps) {
           name="description"
           content="Prasoon Asati's Portfolio - Full Stack Developer skilled in React, Next.js, TypeScript, SASS, Tailwind, Python, Django, and more."
         />
-
+        <meta
+          name="keywords"
+          content="prasoon asati, prasoon, asati, portfolio, developer, frontend developer, asati, gyan sagar college of engineering, gsce, sagar, backend developer, full stack developer, react, next.js, typescript, sass, tailwind, python, django"
+        />
         <meta property="og:url" content="https://prasoonasati.me" />
         <meta property="og:type" content="website" />
         <meta

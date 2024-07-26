@@ -86,7 +86,7 @@ const Footer = () => {
               <Input placeholder="Your website(if exists)" />
               <TextArea placeholder="How can i help?*" />
               <div className="btn-container">
-                <Button text={"Get In Touch"} size="small" type="submit" />
+                <Button text={"Get In Touch"} size="small" type="submit" className="contactBtn"/>
                 {SocialLinks.map((link, index) => {
                   return (
                     <a

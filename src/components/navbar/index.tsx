@@ -15,17 +15,17 @@ const Navbar = () => {
   };
   const navItems = [
     {
-      text: "About ME",
+      text: "About Me",
       link: "#aboutMe",
     },
     {
       text: "Skills",
       link: "#skill",
     },
-    {
-      text: "Projects",
-      link: "#projects",
-    },
+    // {
+    //   text: "Projects",
+    //   link: "#projects",
+    // },
     {
       text: "Contact Me",
       link: "#footer",

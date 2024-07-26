@@ -52,9 +52,9 @@ const HeroSection = () => {
             <div className="introContianer">
               <div className="introduction">
                 <div className="primary-black">Hello I’am</div>
-                <div className="primary-black extra-bold">Prasoon Asati</div>
-                <div className="primary-black extra-bold">Fullstack</div>
-                <div className="outlined extra-bold">Developer</div>{" "}
+                <h1 className="primary-black extra-bold">Prasoon Asati</h1>
+                <h1 className="primary-black extra-bold">Fullstack</h1>
+                <h1 className="outlined extra-bold">Developer</h1>{" "}
                 <div className="primary-black">Based in</div>
                 <div className="primary-black extra-bold">India</div>
               </div>
