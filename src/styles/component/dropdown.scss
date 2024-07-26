@@ -1,0 +1,62 @@
+@import '../vars/color.scss';
+
+#customDropdown {
+    max-width: fit-content;
+    min-width: 100px;
+    user-select: none;
+    position: relative;
+
+    .selectedOption {
+        padding: 12px 24px;
+        border-radius: 6px;
+        border: 1px solid $zinc-300;
+        cursor: pointer;
+        transition: all ease 0.15s;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+
+        .dropdownIcon {
+            transition: all ease 0.25s;
+
+            &.rotate {
+                transform: rotateX(180deg);
+            }
+        }
+
+        &:hover,
+        &.active {
+            border-color: $zinc-500;
+        }
+    }
+
+    .dropdownItemsContainer {
+        border: 1px solid $zinc-300;
+        border-radius: 8px;
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        right: 0;
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                padding: 12px 24px;
+                cursor: pointer;
+
+                &:hover,
+                &:focus {
+                    background-color: $zinc-100;
+                }
+
+                &:active {
+                    background-color: $zinc-200;
+                }
+            }
+        }
+    }
+}
