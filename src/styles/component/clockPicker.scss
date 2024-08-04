@@ -1,0 +1,111 @@
+@import '../vars/color.scss';
+$it : 1;
+$clockWidth :256;
+$clockHeight :256;
+$primary :#6200EE;
+
+#timePickerContainer {
+    user-select: none;
+
+    .clock {
+        width: #{$clockWidth}px;
+        height: #{$clockHeight}px;
+        border-radius: 50%;
+        background: #21212114;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        .hourNum {
+            position: absolute;
+            height: #{$clockHeight/2}px;
+            transform-origin: bottom center;
+            top: 0;
+            font-size: 16px;
+            padding: 12px;
+            line-height: 24px;
+            width: 48px;
+            text-align: center;
+
+            @while($it<=12) {
+                &:nth-child(#{$it}) {
+                    transform: rotate(#{$it * 30}deg);
+
+                    .numMain {
+                        transform: rotate(-#{$it * 30}deg);
+
+                        &.active {
+                            color: white;
+                        }
+                    }
+
+                }
+
+                $it : $it +1;
+            }
+        }
+
+        .centralHandel {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: $primary;
+        }
+
+        .minute-handle,
+        .hour-handle-container,
+        .second-handle {
+            position: absolute;
+            transform-origin: bottom center;
+        }
+
+        .hour-handle-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            top: 1px;
+
+            .hour-handle {
+                width: 2px;
+                height: 80px;
+                background: $primary;
+                z-index: 3;
+            }
+
+            .hour-handle-circle {
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                background: $primary;
+
+
+                .circleValue {
+                    font-size: 16px;
+                    padding: 12px;
+                    line-height: 24px;
+                    font-weight: 500;
+                    text-align: center;
+                    color: whiite;
+                }
+            }
+        }
+
+        .minute-handle {
+            $minuteHandleHeightDiff: 30;
+            width: 2px;
+            height: #{($clockHeight/2) - $minuteHandleHeightDiff}px;
+            background: rgb(51, 58, 255);
+            top:#{$minuteHandleHeightDiff}px;
+        }
+
+        .second-handle {
+            $secondHandleHeightDiff: 10;
+            width: 2px;
+            height: #{($clockHeight/2) - $secondHandleHeightDiff}px;
+            background: rgb(163, 31, 8);
+            top:#{$secondHandleHeightDiff}px;
+        }
+    }
+}
