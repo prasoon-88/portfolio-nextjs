@@ -172,7 +172,7 @@ const ExperieceSection = () => {
     },
   ];
   return (
-    <div className="experinceSection">
+    <div className="experinceSection mt-120">
       <div className="container">
         <div className="row">
           <div className="col-12">
@@ -185,6 +185,21 @@ const ExperieceSection = () => {
                 <ExperienceCard key={index} {...experience} />
               ))}
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const MyWork = () => {
+  return (
+    <div id="myWork">
+      <div className="pt-120 pb-120 container">
+        <div className="row">
+          <div className="col-12 text-center fs-48 lh-56 primary-white text-center reveal">
+            <span>My</span>
+            <span className="extra-bold"> Work</span>
           </div>
         </div>
       </div>
@@ -249,8 +264,9 @@ export default function Home() {
   return (
     <main id="home" className={sora.className}>
       <HeroSection />
-      <MySkills />
       <ExperieceSection />
+      <MySkills />
+      <MyWork />
       <AboutMe />
     </main>
   );

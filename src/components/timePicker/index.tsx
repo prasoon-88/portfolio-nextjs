@@ -141,7 +141,12 @@ const ClockPicker = () => {
             onClick={() => changeFace(2)}
           >{`>`}</div>
         </div>
-        <div className="clock" ref={clockRef} onMouseDown={handleMouseDown}>
+        <div
+          className="clock"
+          ref={clockRef}
+          onMouseDown={handleMouseDown}
+          onTouchStart={handleMouseDown}
+        >
           {/* Hours */}
           {Array.from({ length: 12 }).map((_, index) => (
             <div
