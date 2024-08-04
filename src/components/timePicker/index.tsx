@@ -27,7 +27,7 @@ const ClockPicker = () => {
 
   return (
     <div id="timePickerContainer">
-      <div className="clock" ref={clockRef}>
+      <div className="clock" ref={clockRef} onMouseDown={handleMouseDown}>
         {/* Hours */}
         {Array.from({ length: 12 }).map((_, index) => (
           <div
@@ -46,7 +46,6 @@ const ClockPicker = () => {
         <div className="centralHandel"></div>
         {hour != null ? (
           <div
-            onMouseDown={handleMouseDown}
             className="hour-handle-container"
             style={{ transform: `rotate(${hour * PER_HOUR_DEG}deg)` }}
           >
