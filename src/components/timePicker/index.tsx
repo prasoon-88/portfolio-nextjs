@@ -1,13 +1,24 @@
 import useAngleFromCenter from "@/customHooks/useAngleFromCenter";
 import classNames from "classnames";
 import React, { useCallback, useEffect, useState } from "react";
+import dayjs from "dayjs";
+import objectSupport from "dayjs/plugin/objectSupport";
 
-const ClockPicker = () => {
-  const PER_HOUR_DEG = 30;
-  const PER_MINUTE_DEG = 6;
-  const [hour, setHour] = useState<number>(12);
-  const [minute, setMinute] = useState<number>(0);
-  const [meridiem, setMeridiem] = useState<"am" | "pm">("am");
+dayjs.extend(objectSupport);
+
+const PER_HOUR_DEG = 30;
+const PER_MINUTE_DEG = 6;
+
+interface ClockPickerProps {
+  value: dayjs.Dayjs | Date;
+  onChange: (value: dayjs.Dayjs) => void;
+}
+
+const ClockPicker = (props: ClockPickerProps) => {
+  const { value, onChange } = props;
+  const [hour, setHour] = useState<number>();
+  const [minute, setMinute] = useState<number>();
+  const [meridiem, setMeridiem] = useState<"am" | "pm">();
   const [clockRef, angle, handleMouseDown] = useAngleFromCenter();
   const [clockFace, setClockFace] = useState<number>(1);
   const [enableTransition, setEnableTransition] = useState<boolean>(false);
@@ -78,17 +89,33 @@ const ClockPicker = () => {
   }, [angle]);
 
   const getClockHandleRotateDeg = () => {
-    if (clockFace == 1) return hour * PER_HOUR_DEG;
-    else if (clockFace == 2) return minute * PER_MINUTE_DEG;
+    if (clockFace == 1 && hour) return hour * PER_HOUR_DEG;
+    else if (clockFace == 2 && minute) return minute * PER_MINUTE_DEG;
   };
 
   const handleSubmit = () => {
-    alert(`${hour}:${minute} ${meridiem}`);
+    const newValue = dayjs({
+      hour: hour,
+      minute: minute,
+      second: 0,
+      millisecond: 0,
+    }).add(meridiem === "am" ? 12 : 0, "hour");
+    onChange(newValue);
   };
 
   useEffect(() => {
     handleChangeAngle();
-  }, [angle]);
+  }, [angle, handleChangeAngle]);
+
+  useEffect(() => {
+    let parsedValue = dayjs(value);
+    if (value && dayjs(value).isValid()) {
+      parsedValue = dayjs(value);
+    }
+    setHour(parsedValue.hour() % 12);
+    setMinute(parsedValue.minute());
+    setMeridiem(parsedValue.hour() >= 12 ? "pm" : "am");
+  }, [value]);
 
   return (
     <div id="timePickerContainer">
