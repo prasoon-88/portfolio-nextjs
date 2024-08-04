@@ -13,6 +13,7 @@ $primary :#6200EE;
     background: #FFFFFF;
     box-shadow: 0px 4px 4px 0px #00000040;
 
+
     .colockText {
         font-size: 10px;
         font-weight: 500;
@@ -104,6 +105,11 @@ $primary :#6200EE;
 #clockContainerMain {
     display: grid;
 
+    input {
+        user-select: none;
+    }
+
+
     .clockFaceChanger {
         display: flex;
         align-items: center;
@@ -181,18 +187,17 @@ $primary :#6200EE;
             background: $primary;
         }
 
-        .minute-handle,
-        .hour-handle-container,
-        .second-handle {
+        .hour-handle-container {
             position: absolute;
             transform-origin: bottom center;
-        }
-
-        .hour-handle-container {
             display: flex;
             flex-direction: column;
             align-items: center;
             top: 1px;
+
+            &.enableTransition {
+                transition: all 0.3s ease;
+            }
 
             .hour-handle {
                 width: 2px;

@@ -5,14 +5,29 @@ import React, { useCallback, useEffect, useState } from "react";
 const ClockPicker = () => {
   const PER_HOUR_DEG = 30;
   const PER_MINUTE_DEG = 6;
-  const [hour, setHour] = useState<number>(0);
+  const [hour, setHour] = useState<number>(12);
   const [minute, setMinute] = useState<number>(0);
   const [meridiem, setMeridiem] = useState<"am" | "pm">("am");
   const [clockRef, angle, handleMouseDown] = useAngleFromCenter();
   const [clockFace, setClockFace] = useState<number>(1);
+  const [enableTransition, setEnableTransition] = useState<boolean>(false);
 
   const changeFace = (newFace: number) => {
     setClockFace(newFace);
+  };
+
+  const handleInputFocus = () => {
+    setEnableTransition(true);
+  };
+
+  const handleInputBlur = () => {
+    handleTransitionEnd();
+  };
+
+  const handleTransitionEnd = () => {
+    setTimeout(() => {
+      setEnableTransition(false);
+    }, 500);
   };
 
   const handleHourNumClick = (hour: number) => {
@@ -21,6 +36,14 @@ const ClockPicker = () => {
 
   const handleMinuteNumClick = (hour: number) => {
     setMinute(hour);
+  };
+
+  const handleInputValueChnage = (value: number) => {
+    if (clockFace == 1) {
+      if (value <= 12) handleHourNumClick(value);
+    } else {
+      if (value <= 60) handleMinuteNumClick(value);
+    }
   };
 
   const handleNumClick = (hour: number) => {
@@ -71,13 +94,23 @@ const ClockPicker = () => {
     <div id="timePickerContainer">
       <div className="colockText">Select Time</div>
       <div className="timeTextInputPreviewContainer">
-        <div className="preview hour" onClick={() => setClockFace(1)}>
-          {hour}
-        </div>
+        <input
+          className="preview hour"
+          value={hour}
+          onClick={() => changeFace(1)}
+          onChange={(e) => handleInputValueChnage(Number(e.target.value))}
+          onFocus={handleInputFocus}
+          onBlur={handleInputBlur}
+        />
         <div className="colonContainer">:</div>
-        <div className="preview hour" onClick={() => setClockFace(2)}>
-          {minute}
-        </div>
+        <input
+          className="preview hour"
+          value={minute}
+          onClick={() => changeFace(2)}
+          onChange={(e) => handleInputValueChnage(Number(e.target.value))}
+          onFocus={handleInputFocus}
+          onBlur={handleInputBlur}
+        />
         <div className="amPmContainer">
           <div
             className={classNames("amPmPreview am", {
@@ -128,7 +161,9 @@ const ClockPicker = () => {
           {/* Central handel */}
           <div className="centralHandel"></div>
           <div
-            className="hour-handle-container"
+            className={classNames("hour-handle-container", {
+              enableTransition,
+            })}
             style={{ transform: `rotate(${getClockHandleRotateDeg()}deg)` }}
           >
             <div className="hour-handle-circle">
@@ -138,7 +173,7 @@ const ClockPicker = () => {
                   transform: `rotate(-${getClockHandleRotateDeg()}deg)`,
                 }}
               >
-                {clockFace == 1 ? hour : minute}
+                {clockFace == 1 ? (hour ? hour : 12) : minute}
               </div>
             </div>
             <div className="hour-handle"></div>
